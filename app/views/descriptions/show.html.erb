@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @description.user_id %>
+</p>
+
+<p>
+  <strong>Draw:</strong>
+  <%= @description.draw_id %>
+</p>
+
+<p>
+  <strong>Counter:</strong>
+  <%= @description.counter %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @description.parent %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @description.active %>
+</p>
+
+<%= link_to 'Edit', edit_description_path(@description) %> |
+<%= link_to 'Back', descriptions_path %>
