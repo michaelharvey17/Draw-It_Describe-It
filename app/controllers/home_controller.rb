@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
   def index
+    if Drawing.find_by(active: true) 
+      @pdrawing = Drawing.find_by(active: true)
+    else 
+      @pdescription = Description.find_by(active: true)
+    end
   end
 
   def login

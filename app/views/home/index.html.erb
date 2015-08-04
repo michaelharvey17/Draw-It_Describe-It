@@ -1,6 +1,6 @@
 <h1>Home#index</h1>
 
-		<% if current_user != nil %>
+		<% if current_user %>
 	<%= current_user.username %>
 	<%= link_to "Log Out", '/logout' %>
 		<% else %>
@@ -12,10 +12,17 @@
 
 
 
-		<% if current_user != nil %>
-
+		<% if current_user %>
+			<% if @pdrawing %>
+				<%= @drawing.image %>
+			<% else %>
+				<%= @pdescription.content %>
+			<% end %>
 		<% else %>
-
+			<% if @pdrawing %>
+				<%= @drawing.image %>
+			<% else %>
+				<%= @pdescription.content %>
+			<% end %>
 		<% end %>
-
 
