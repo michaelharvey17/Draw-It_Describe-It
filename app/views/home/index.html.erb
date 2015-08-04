@@ -1,0 +1,6 @@
+<h1>Home#index</h1>
+
+	<% if current_user != nil %>
+		<%= current_user.username %>
+		<%= link_to "Log Out", '/logout' %>
+	<% end %>

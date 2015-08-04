@@ -5,6 +5,7 @@ RSpec.describe "descriptions/edit", type: :view do
     @description = assign(:description, Description.create!(
       :user_id => 1,
       :draw_id => 1,
+      :content => "MyString",
       :counter => 1,
       :parent => false,
       :active => false
@@ -19,6 +20,8 @@ RSpec.describe "descriptions/edit", type: :view do
       assert_select "input#description_user_id[name=?]", "description[user_id]"
 
       assert_select "input#description_draw_id[name=?]", "description[draw_id]"
+
+      assert_select "input#description_content[name=?]", "description[content]"
 
       assert_select "input#description_counter[name=?]", "description[counter]"
 

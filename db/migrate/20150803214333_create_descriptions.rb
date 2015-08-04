@@ -3,6 +3,7 @@ class CreateDescriptions < ActiveRecord::Migration
     create_table :descriptions do |t|
       t.integer :user_id
       t.integer :draw_id
+      t.string :content
       t.integer :counter
       t.boolean :parent
       t.boolean :active

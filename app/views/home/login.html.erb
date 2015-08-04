@@ -1,0 +1,9 @@
+<h1>Loginmuthafucka#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+
+	<%= form_tag "/login", method:"post", class:'login' do %>
+	  <%=text_field_tag :username, params[:username], :placeholder => "Username" %>
+	  <%=password_field_tag :password_digest, nil, :placeholder => "Password" %>
+	  <%=submit_tag :"Log in" %>
+	<% end %>

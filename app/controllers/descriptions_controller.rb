@@ -69,6 +69,6 @@ class DescriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def description_params
-      params.require(:description).permit(:user_id, :draw_id, :counter, :parent, :active)
+      params.require(:description).permit(:user_id, :draw_id, :content, :counter, :parent, :active)
     end
 end

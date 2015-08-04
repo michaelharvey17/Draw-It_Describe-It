@@ -5,6 +5,7 @@ RSpec.describe "descriptions/show", type: :view do
     @description = assign(:description, Description.create!(
       :user_id => 1,
       :draw_id => 2,
+      :content => "Content",
       :counter => 3,
       :parent => false,
       :active => false
@@ -15,6 +16,7 @@ RSpec.describe "descriptions/show", type: :view do
     render
     expect(rendered).to match(/1/)
     expect(rendered).to match(/2/)
+    expect(rendered).to match(/Content/)
     expect(rendered).to match(/3/)
     expect(rendered).to match(/false/)
     expect(rendered).to match(/false/)
