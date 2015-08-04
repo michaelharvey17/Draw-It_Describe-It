@@ -1,6 +1,17 @@
 <h1>Home#index</h1>
 
-	<% if current_user != nil %>
-		<%= current_user.username %>
-		<%= link_to "Log Out", '/logout' %>
-	<% end %>
+		<% if current_user != nil %>
+	<%= current_user.username %>
+	<%= link_to "Log Out", '/logout' %>
+		<% else %>
+	<%= link_to "Sign Up", new_user_path, class: 'boxes' %>
+	<%= link_to "Log In", '/login', class: 'boxes' %>
+		<% end %>
+
+
+
+		<% if current_user != nil %>
+		
+		<% else %>
+
+		<% end %>
