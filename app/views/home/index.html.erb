@@ -11,7 +11,7 @@
 
 <% if @pdrawing %>
 	<div class="pdrawing">
-		<%= @drawing.image %>
+		<%= @drawing.image.url(:medium) %>
 	</div>
 
 	<% if current_user %>
@@ -31,7 +31,11 @@
 		<% if @cdescriptions %>
 			<% @cdescriptions.each do |x| %>	
 
-				<div class=''><%= x.content %></div>
+				<div class=''>
+					<%= link_to "Vote", like_drawing_path(x), method: :put %>
+					<%= x.score %>
+					<%= x.content %>
+				</div>
 				
 
 			<% end %>
@@ -70,7 +74,11 @@
 		<% if @cdrawing %>
 			<% @cdrawing.each do |x| %>	
 
-				<div class=''><%= image_tag x.image %></div>
+				<div class=''>
+					<%= link_to "Vote", like_drawing_path(x), method: :put %>
+					<%= x.score %>
+					<%= image_tag x.image.url(:small) %>
+				</div>
 				
 
 			<% end %>

@@ -3,11 +3,17 @@ Rails.application.routes.draw do
   get '/login' => 'home#login'
   post '/login' => 'home#login_process'
   get '/logout' => 'home#logout'
+
   
 
 
   resources :descriptions
-  resources :drawings
+  resources :drawings do
+    member do
+      put "like", to: "drawings#upvote"
+    end
+  end
+
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -68,6 +68,12 @@ class DescriptionsController < ApplicationController
     end
   end
 
+  def upvote
+    @description = Description.find(params[:id])
+    @description.upvote_by current_user
+    redirect_to '/'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_description
