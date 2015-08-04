@@ -24,11 +24,18 @@ class DrawingsController < ApplicationController
   # POST /drawings
   # POST /drawings.json
   def create
+    @parent = Description.find_by(active: true)
+
     @drawing = Drawing.new(drawing_params)
+
+      @drawing.des_id = @parent.id 
+      @drawing.user_id = session[:user_id]
+      @drawing.parent = false
+      @drawing.active = false
 
     respond_to do |format|
       if @drawing.save
-        format.html { redirect_to @drawing, notice: 'Drawing was successfully created.' }
+        format.html { redirect_to '/', notice: 'Drawing was successfully created.' }
         format.json { render :show, status: :created, location: @drawing }
       else
         format.html { render :new }

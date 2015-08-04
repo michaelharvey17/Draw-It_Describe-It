@@ -24,11 +24,18 @@ class DescriptionsController < ApplicationController
   # POST /descriptions
   # POST /descriptions.json
   def create
+    @parent = Drawing.find_by(active: true)
+
     @description = Description.new(description_params)
 
+      @description.draw_id = @parent.id 
+      @description.user_id = session[:user_id]
+      @description.parent = false
+      @description.active = false
+      
     respond_to do |format|
       if @description.save
-        format.html { redirect_to @description, notice: 'Description was successfully created.' }
+        format.html { redirect_to '/', notice: 'Description was successfully created.' }
         format.json { render :show, status: :created, location: @description }
       else
         format.html { render :new }
