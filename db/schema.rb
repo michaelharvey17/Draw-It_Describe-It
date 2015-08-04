@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20150804152325) do
     t.integer  "user_id"
     t.integer  "draw_id"
     t.string   "content"
-    t.integer  "counter"
     t.boolean  "parent"
     t.boolean  "active"
     t.datetime "created_at", null: false
@@ -27,15 +26,10 @@ ActiveRecord::Schema.define(version: 20150804152325) do
   create_table "drawings", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "des_id"
-    t.integer  "counter"
     t.boolean  "parent"
     t.boolean  "active"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
