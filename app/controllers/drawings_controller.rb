@@ -76,6 +76,6 @@ class DrawingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def drawing_params
-      params.require(:drawing).permit(:user_id, :des_id, :image, :counter, :parent, :active)
+      params.require(:drawing).permit(:user_id, :des_id, :image, :parent, :active)
     end
 end

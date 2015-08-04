@@ -1,4 +1,4 @@
-<h1>Home#index</h1>
+<h1>Draw it! Describe it!</h1>
 
 		<% if current_user %>
 	<%= current_user.username %>
@@ -27,12 +27,13 @@
 	<div class='desdiv'>
 		
 		<h2>Descriptions</h2>
-		
-		<% @pdrawing.description.each do |x| %>	
-			<% if @pdrawing.description %>
-			
-				<div class=''><%= x.content %></div>	
-			
+
+		<% if @cdescriptions %>
+			<% @cdescriptions.each do |x| %>	
+
+				<div class=''><%= x.content %></div>
+				
+
 			<% end %>
 		<% end %>
 	</div>
@@ -54,9 +55,9 @@
 
 	<% if current_user %>
 		<div class='mkdrawdiv'>
-			<%= form_for 'drawing', html: { class:'newdrawing', multipart: true } do |f| %>
+			<%= form_for @drawing, html: { class:'newdrawing', multipart: true } do |f| %>
 				<%= f.file_field :image %>
-				<%=f.submit :"Drawed" %>
+				<%=f.submit :"Submit Drawing" %>
 			<% end %>
 		</div>
 	<% end %>
@@ -66,10 +67,11 @@
 
 		<h2>Drawings</h2>
 		
-		<% if @pdescription.drawing %>
-			<% @pdescription.drawing.each do |x| %>	
+		<% if @cdrawing %>
+			<% @cdrawing.each do |x| %>	
 
-				<div class=''><%= x.image %></div>
+				<div class=''><%= image_tag x.image %></div>
+				
 
 			<% end %>
 		<% end %>

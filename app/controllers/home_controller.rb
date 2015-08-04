@@ -2,9 +2,15 @@ class HomeController < ApplicationController
   def index
     if Drawing.find_by(active: true) 
       @pdrawing = Drawing.find_by(active: true)
+      @cdescription = Description.where(draw_id: @pdrawing.id)
     else 
       @pdescription = Description.find_by(active: true)
+      @cdrawing = Drawing.where(des_id: @pdescription.id)
     end
+
+
+
+    @drawing = Drawing.new
   end
 
   def login

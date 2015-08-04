@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :descriptions
-
 
   get '/login' => 'home#login'
   post '/login' => 'home#login_process'
   get '/logout' => 'home#logout'
+  
 
 
+  resources :descriptions
   resources :drawings
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
