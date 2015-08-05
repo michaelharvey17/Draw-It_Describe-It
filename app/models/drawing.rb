@@ -11,7 +11,7 @@ class Drawing < ActiveRecord::Base
 
 
   def score
-    self.get_upvotes.size
+    self.get_likes.size
   end
 end
 

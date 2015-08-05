@@ -68,10 +68,10 @@ class DrawingsController < ApplicationController
     end
   end
 
-  def upvote
+  def like
     @parent = Description.find_by(active: true)
     @drawing = Drawing.find(params[:id])
-    @drawing.upvote_by current_user
+    @drawing.liked_by current_user
 
     if @drawing.score >= 10
       @parent.update(active: false)
@@ -80,6 +80,17 @@ class DrawingsController < ApplicationController
     redirect_to '/'
   end
 
+  def unlike
+    @parent = Description.find_by(active: true)
+    @drawing = Drawing.find(params[:id])
+    @drawing.unliked_by current_user
+
+    if @drawing.score >= 10
+      @parent.update(active: false)
+      @drawing.update(parent: true, active: true)
+    end
+    redirect_to '/'
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
