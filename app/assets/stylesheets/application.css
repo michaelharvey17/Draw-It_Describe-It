@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	background-color: #424142;
+	color: white;
+}
+
+.main {
+	background-color: #F9442C;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+
+}
+
+.pdes {
+	font-size: 4vw;	
+}
