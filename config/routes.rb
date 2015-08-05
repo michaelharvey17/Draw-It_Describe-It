@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   
 
 
-  resources :descriptions
+  resources :descriptions do
+    member do
+      put "like", to: "descriptions#upvote"
+    end
+  end
   resources :drawings do
     member do
       put "like", to: "drawings#upvote"

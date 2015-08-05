@@ -69,8 +69,14 @@ class DescriptionsController < ApplicationController
   end
 
   def upvote
+    @parent = Drawing.find_by(active: true)
     @description = Description.find(params[:id])
     @description.upvote_by current_user
+
+    if @description.score >= 10
+      @parent.update(active: false)
+      @description.update(parent: true, active: true)
+    end
     redirect_to '/'
   end
 

@@ -11,6 +11,7 @@ class HomeController < ApplicationController
 
 
     @drawing = Drawing.new
+    @description = Description.new
   end
 
   def login
