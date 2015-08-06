@@ -18,6 +18,16 @@
 //= require drawingboard.min.js 
 
 $('document').ready(function(){
+
+    var myBoard = new DrawingBoard.Board('createdrawing', {webStorage: false});
+    $('.newdrawing').on('submit', function(e) {
+    var img = myBoard.getImg();
+    var imgInput = (myBoard.blankCanvas == img) ? '' : img;
+    $(this).find('input[name="drawing[image]"]').val( imgInput );
+    myBoard.clearWebStorage();
+  });
+
+
   $('#des_archive').hide();
   $("#des_button").click(function() {
     $('#draw_archive').hide("slow");
@@ -29,3 +39,4 @@ $('document').ready(function(){
     $('#draw_archive').show("slow");
   });
 })
+

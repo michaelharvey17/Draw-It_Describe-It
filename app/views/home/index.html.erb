@@ -17,6 +17,15 @@
 	</div>
 </div>
 
+
+<div class='rcornerback'>
+	<div class='rcorner'>
+			<%= link_to "LOG OUT", '/logout', class: 'boxes' %>
+			<%= link_to "LOG IN", '/login', class: 'boxes' %>
+	</div>
+</div>
+
+
 <% if @pdrawing %>
 	<div class='mainback'>
 		<div class='main'>
@@ -125,17 +134,7 @@
 					</div>
 				</div>
 			<% end %>
-
-			<script>
-			  var myBoard = new DrawingBoard.Board('createdrawing');
-			  $('.newdrawing').on('submit', function(e) {
-			  var img = myBoard.getImg();
-			  var imgInput = (myBoard.blankCanvas == img) ? '' : img;
-			  $(this).find('input[name="drawing[image]"]').val( imgInput );
-			  myBoard.clearWebStorage();
-			});
-			</script>
-
+			
 			<div class='drawdivback'>
 				<div class='drawdiv'>
 					<% if current_user %>

@@ -35,10 +35,14 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
-  def loser_archive
+  def losers
     @descriptions = Description.where(parent: false).reverse
     @drawings = Drawing.where(parent: false).reverse
+  end
 
+  def winners
+    @descriptions = Description.where(parent: true, active: false).reverse
+    @drawings = Drawing.where(parent: true, active: false).reverse
   end
 
 end
