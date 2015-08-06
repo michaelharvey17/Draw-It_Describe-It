@@ -61,7 +61,7 @@ body {
 	border-radius: 3px;
 }
 .corner {
-	background-color: #424142;
+	background-color: #FA432B;
 	border: solid black 5px;
 	border-radius: 20px;
 }
@@ -103,7 +103,7 @@ body {
 	border-radius: 3px;
 }
 .rcorner {
-	background-color: #424142;
+	background-color: #FA432B;
 	border: solid black 5px;
 	border-radius: 20px;
 }
@@ -828,8 +828,8 @@ body {
 
 .archivebuttonsback {
 	background-color: black;
-	width: 50%;
-	margin: 20px auto 20px auto;
+	width: 80%;
+	margin: 20px auto 6px auto;
 	border-radius: 3px;
 	border: solid #272822 1px;
 }
@@ -841,6 +841,29 @@ body {
 	border-radius: 20px;
 }
 
+.archive_button {
+	display: inline-block;
+	background-color: #D7D4D7;
+	border: solid grey 3px;
+	border-radius: 10px;
+	margin: 2px 50px 2px 50px;
+	padding: 3px 0px 3px 0px; 
+	width: 170px;
+	font-size: .8em;
+	text-decoration: none;
+	color: black;
+	transition-duration: 200ms;
+}
+.archive_button:hover {
+	background-color: white;
+	border: solid #FBAF6F 3px;
+}
+.archive_button:focus {
+	background-color: white;
+	border: solid #FBAF6F 3px;
+	outline: none;
+}
+
 
 .archiveback {
 	background-color: black;
@@ -850,10 +873,16 @@ body {
 	border: solid #272822 1px;
 }
 .archive {
+	text-align: center;
 	background-color: #F9442C;
 	padding: 20px;
 	border: solid black 5px;
 	border-radius: 20px;
+}
+
+.archiveby {
+	text-align: center;
+	color: black;
 }
 
 
@@ -878,25 +907,4 @@ body {
 	font-size: 1.5em;
 }*/
 
-.archive_button {
-	display: inline-block;
-	background-color: #D7D4D7;
-	border: solid grey 3px;
-	border-radius: 10px;
-	margin: 2px 50px 2px 50px;
-	padding: 3px 10px 3px 10px; 
-	width: 150px;
-	font-size: .8em;
-	text-decoration: none;
-	color: black;
-	transition-duration: 200ms;
-}
-.archive_button:hover {
-	background-color: white;
-	border: solid #FBAF6F 3px;
-}
-.archive_button:focus {
-	background-color: white;
-	border: solid #FBAF6F 3px;
-	outline: none;
-}
+

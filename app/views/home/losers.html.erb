@@ -38,10 +38,14 @@
 					<div class='cdes'>
 						<%= x.content %>
 					</div>
+					
 					<div class='cdeslike'>
-						<%= x.user.username %>
-						<div class='count'>
-							<span><%= x.score %></span> people liked this
+						<div class='archiveby'>
+							by: <%= x.user.username %>
+						</div>
+
+						<div class='count-des'>
+							<span><%= x.score %></span> users liked this
 						</div>
 					</div>
 				</div>
@@ -55,14 +59,16 @@
 						<div class='cdraw'>
 							<%= image_tag x.image %>
 						</div>
-						<div>
-							<%= x.user.username %>
-						</div>
 						
-						<div class='count'>
-							<span><%= x.score %></span> people liked this
-						</div>
+						<div class='cdrawlike'>
+							<div class='archiveby'>
+								by: <%= x.user.username %>
+							</div>
 						
+							<div class='count-draw'>
+								<span><%= x.score %></span> users liked this
+							</div>
+						</div>
 					</div>
 				</div>
 			<% end %>

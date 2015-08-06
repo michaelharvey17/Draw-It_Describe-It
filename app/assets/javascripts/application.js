@@ -11,13 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
 
 //= require drawingboard.min.js 
 
-$('document').ready(function(){
+//= require turbolinks
+//= require_tree .
+
+
+$(document).ready(function(){
 
     var myBoard = new DrawingBoard.Board('createdrawing', {webStorage: false});
     $('.newdrawing').on('submit', function(e) {
@@ -29,14 +32,19 @@ $('document').ready(function(){
 
 
   $('#des_archive').hide();
+  $('#draw_button').css({"background-color": "white", "border": "solid #FBAF6F 3px"});
   $("#des_button").click(function() {
     $('#draw_archive').hide("slow");
     $('#des_archive').show("slow");
+    $('#des_button').css({"background-color": "white", "border": "solid #FBAF6F 3px"});
+    $('#draw_button').removeAttr('style');
   });
 
   $("#draw_button").click(function() {
     $('#des_archive').hide("slow");
     $('#draw_archive').show("slow");
+    $('#draw_button').css({"background-color": "white", "border": "solid #FBAF6F 3px"});
+    $('#des_button').removeAttr('style');
   });
 })
 

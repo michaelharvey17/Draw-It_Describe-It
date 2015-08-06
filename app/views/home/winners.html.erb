@@ -1,17 +1,13 @@
 <div class='topback'>
 	<div class="top">
-		<h1>Winners Archive</h1>
+		<h1>Winners<br>Archive</h1>
 	</div>
 </div>
-<div class="navback">
-	<div class="nav">
-		<a href="/">Home</a>
-	</div>
-</div>
+
 <div class='cornerback'>
 	<div class='corner'>
 		<% if current_user %>
-			<div class='boxes'><%= current_user.username %></div>
+			<div class='currentbox'><%= current_user.username %></div>
 			<%= link_to "LOG OUT", '/logout', class: 'boxes' %>
 		<% else %>
 			<%= link_to "SIGN UP", new_user_path, class: 'boxes' %>
@@ -20,23 +16,36 @@
 	</div>
 </div>
 
-<div class="mainback">
-	<div class="main">
-		<div class="header">
-			<button class="archive_button", id="des_button">Describe It!</button>
-			<button class="archive_button", id="draw_button">Draw It!</button>
-		</div>
-		
+<div class='rcornerback'>
+	<div class='rcorner'>
+		<%= link_to "HOME", '/', class: 'rboxes' %>
+		<%= link_to "Losers", '/losers', class: 'rboxes' %>
+	</div>
+</div>
+
+<div class='archivebuttonsback'>
+	<div class="archivebuttons">
+		<button class="archive_button", id="des_button">Winning Descriptions</button>
+		<button class="archive_button", id="draw_button">Winning Drawings</button>
+	</div>
+</div>
+
+<div class="archiveback">
+	<div class="archive">	
 		<div class="archive_main" id="des_archive">
 			<% @descriptions.each do |x| %>
 				<div class='cdesboxback'>
 					<div class='cdes'>
 						<%= x.content %>
 					</div>
+
 					<div class='cdeslike'>
-						<%= x.user.username %>
-						<div class='count'>
-							<span>Winner!</span>
+						<div class='archiveby'>
+							by: <%= x.user.username %>
+						</div>
+						
+						<div class='count-des'>
+							<span>Champion!</span>
 						</div>
 					</div>
 				</div>
@@ -50,14 +59,16 @@
 						<div class='cdraw'>
 							<%= image_tag x.image %>
 						</div>
-						<div>
-							<%= x.user.username %>
-						</div>
+
+						<div class='cdrawlike'>
+							<div class='archiveby'>
+								by: <%= x.user.username %>
+							</div>
 						
-						<div class='count'>
-							<span>Winner!</span>
+							<div class='count-draw'>
+								<span>Champion!</span>
+							</div>
 						</div>
-						
 					</div>
 				</div>
 			<% end %>
