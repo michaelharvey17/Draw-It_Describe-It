@@ -35,4 +35,10 @@ class HomeController < ApplicationController
     redirect_to '/'
   end
 
+  def archive
+    @descriptions = Description.where(parent: false).reverse
+    @drawings = Drawing.where(parent: false).reverse
+
+  end
+
 end
