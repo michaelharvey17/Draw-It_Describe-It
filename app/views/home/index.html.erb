@@ -1,101 +1,171 @@
-<h1>Draw it! Describe it!</h1>
 
-		<% if current_user %>
-	<%= current_user.username %>
-	<%= link_to "Log Out", '/logout' %>
-		<% else %>
-	<%= link_to "Sign Up", new_user_path, class: 'boxes' %>
-	<%= link_to "Log In", '/login', class: 'boxes' %>
-		<% end %>
-
-
-<% if @pdrawing %>
-	<div class="pdrawing">
-		<%= image_tag @pdrawing.image.url(:medium) %>
-		<%= @pdrawing.user.username %>
+<div class='topback'>
+	<div class='top'>
+		<h1>Draw it!<br>Describe it!</h1>
 	</div>
-
-	<% if current_user %>
-		<div class='mkdesdiv'>
-			<%= form_for @description, html: { class:'newdescription' } do |f| %>
-				<%=f.label :"Write Your Description" %><br />
-				<%=f.text_area :content, :placeholder => "Go ahead..." %><br>
-				<%=f.submit :"Submit Description" %>
-			<% end %>
-		</div>
-	<% end %>
-
-	<div class='desdiv'>
-		
-		<h2>Descriptions</h2>
-
-		<% if @cdescription %>
-			<% @cdescription.each do |x| %>	
-
-				<div class=''>
-					<%= link_to "Vote", like_description_path(x), method: :put %>
-					<%= x.score %>
-					<%= x.content %></div>
-				
-
-			<% end %>
-		<% end %>
-	</div>
-
-
-
-<% else %>
-
-<div class='main'>
-
-	<div class='pdes'>
-		<%= @pdescription.content %>
-		<%= @pdescription.user.username %>	
-	</div>
-
-
-	<% if current_user %>
-		<div class='mkdrawdiv'>
-			<%= form_for @drawing, html: { class:'newdrawing', multipart: true } do |f| %>
-				<%= f.file_field :image %>
-				<%=f.submit :"Submit Drawing" %>
-			<% end %>
-		</div>
-	<% end %>
-
-
-	<div class='drawdiv'>
-
-		<h2>Drawings</h2>
-		
-		<% if @cdrawing %>
-			<% @cdrawing.each do |x| %>	
-
-				<div class=''>
-					<%= link_to "Vote", like_drawing_path(x), method: :put %>
-					<%= x.score %>
-					<%= image_tag x.image.url(:small) %>
-				</div>
-				
-
-			<% end %>
-		<% end %>
-		
-	</div>
-
 </div>
 
+<div class='cornerback'>
+	<div class='corner'>
+		<% if current_user %>
+			<div class='boxes'><%= current_user.username %></div>
+			<%= link_to "LOG OUT", '/logout', class: 'boxes' %>
+		<% else %>
+			<%= link_to "SIGN UP", new_user_path, class: 'boxes' %>
+			<%= link_to "LOG IN", '/login', class: 'boxes' %>
+		<% end %>
+	</div>
+</div>
 
+<% if @pdrawing %>
+	<div class='mainback'>
+		<div class='main'>
+			<div class='header'>
+				The winning drawing from the last game is...
+			</div>
+			
+			<div class='pdrawback'>
+				<div class="pdraw">
+					<%= image_tag @pdrawing.image.url(:medium) %>
+				</div>
+				<div class='pdrawby'>
+					<%= @pdrawing.user.username %>
+				</div>
+			</div>
+			
+			<% if current_user %>
+				<div class='mkdesback'>
+					<div class='mkdes'>
+						<%= form_for @description, html: { class:'newdescription' } do |f| %>
+							<%=f.label :"Write Your Description" %>
+							<%=f.text_area :content, :placeholder => "Go ahead..." %>
+							<%=f.submit :"Submit Description" %>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
 
+			<div class='desdiv'>
+				<% if current_user %>
+					<h2>Like your favorite descriptions of the above drawing...</h2>
+				<% else %>
+					<h2>Log in to Describe It!</h2>
+					<h2>Here are some descriptions of the above drawing...</h2>
+				<% end %>
+				
+				<% if @cdescription %>
+					<% @cdescription.each do |x| %>	
+						<div class='cdesboxback'>
 
+								<div class='cdes'>
+									<%= x.content %>
+								</div>
 
+								<% if current_user %>
+									<div class='cdeslike'>
+										<% if current_user.voted_for? x %>
+											<div class='stat'>
+												*
+											</div>
 
+											<%= link_to "unlike", unlike_description_path(x), method: :put, class: 'unlikebutton' %>
+										<% else %>
+											<div class='stat'>
+												
+											</div>
 
+											<%= link_to "like", like_description_path(x), method: :put, class: 'likebutton' %>
+										<% end %>
 
+										<div class='count'>
+											<span><%= x.score %></span> people liked this
+										</div>
+									</div>
+								<% else %>
+									<div class='cdeslike'>
+										<div class='count'>log in to join the fun!</div>
+									</div>
+								<% end %>
 
+						</div>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+<% else %>
+	<div class='mainback'>
+		<div class='main'>
+			<div class='header'>
+				The winning description from the last game is...
+			</div>
 
+			<div class='pdesback'>
+				<div class='pdes'>
+					"<%= @pdescription.content %>"
+				</div>
+				<div class='pdesby'>
+					<%= @pdescription.user.username %>	
+				</div>
+			</div>
 
+			<% if current_user %>
+				<div class='mkdrawback'>
+					<div class='mkdraw'>
+						<%= form_for @drawing, html: { class:'newdrawing', multipart: true } do |f| %>
+							<%= f.file_field :image %>
+							<%=f.submit :"Submit Drawing" %>
+						<% end %>
+					</div>
+				</div>
+			<% end %>
 
+			<div class='drawdiv'>
+				<% if current_user %>
+					<h2>Like your favorite drawings of the above description...</h2>
+				<% else %>
+					<h2>Log in to Draw It!</h2>
+					<h2>Here are some drawings of the above description...</h2>
+				<% end %>
+				
+				<% if @cdrawing %>
+					<% @cdrawing.each do |x| %>	
+						<div class='cdrawboxback'>
+							<div class='cdrawbox'>
+								<div class='cdraw'>
+									<%= image_tag x.image.url(:small) %>
+								</div>
+								
+								<% if current_user %>
+									<div class='cdrawlike'>
+										<% if current_user.voted_for? x %>
+											<div class='stat'>
+												*
+											</div>
+											
+											<%= link_to "unlike", unlike_drawing_path(x), method: :put, class: 'unlikebutton' %>
+										<% else %>
+											<div class='stat'>
+												
+											</div>
+											
+											<%= link_to "like", like_drawing_path(x), method: :put, class: 'likebutton' %>
+										<% end %>
 
-
+										<div class='count'>
+											<span><%= x.score %></span> people liked this
+										</div>
+									</div>
+								<% else %>
+									<div class='cdrawlike'>
+										<div class='count'>log in to vote!</div>
+									</div>
+								<% end %>
+							</div>
+						</div>
+					<% end %>
+				<% end %>			
+			</div>
+		</div>
+	</div>
 <% end %>

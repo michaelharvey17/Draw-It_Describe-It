@@ -68,10 +68,22 @@ class DescriptionsController < ApplicationController
     end
   end
 
-  def upvote
+  def like
     @parent = Drawing.find_by(active: true)
     @description = Description.find(params[:id])
-    @description.upvote_by current_user
+    @description.liked_by current_user
+
+    if @description.score >= 10
+      @parent.update(active: false)
+      @description.update(parent: true, active: true)
+    end
+    redirect_to '/'
+  end
+  
+  def unlike
+    @parent = Drawing.find_by(active: true)
+    @description = Description.find(params[:id])
+    @description.unliked_by current_user
 
     if @description.score >= 10
       @parent.update(active: false)
