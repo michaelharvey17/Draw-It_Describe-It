@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get '/login' => 'home#login'
   post '/login' => 'home#login_process'
   get '/logout' => 'home#logout'
-  get '/archive' => 'home#archive'
+  get '/losers' => 'home#losers'
+  get '/winners' => 'home#winners'
 
   
 
