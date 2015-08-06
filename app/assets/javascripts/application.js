@@ -16,3 +16,16 @@
 //= require_tree .
 
 //= require drawingboard.min.js 
+
+$('document').ready(function(){
+  $('#des_archive').hide();
+  $("#des_button").click(function() {
+    $('#draw_archive').hide("slow");
+    $('#des_archive').show("slow");
+  });
+
+  $("#draw_button").click(function() {
+    $('#des_archive').hide("slow");
+    $('#draw_archive').show("slow");
+  });
+})

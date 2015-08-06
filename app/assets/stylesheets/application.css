@@ -774,4 +774,51 @@ body {
 
 
 
+			    #createdrawing {
+			        width: 400px;
+			        height: 400px;
+			    }
+.navback {
+	background-color: black;
+	position: static;
+	margin: -1.5em 40% .5em 40%;
+	width: 20%;
+	border: solid black 1px;
+	border-radius: 3px;
+}
+.nav {
+	text-align: center;
+	background-color: #F9662E;
+	border: solid black 3px;
+	border-radius: 20px;
+}
+.nav a{
+	color: white;
+	text-decoration: none;
+	font-size: 1.5em;
+}
 
+.archive_button {
+	display: inline-block;
+	background-color: #D7D4D7;
+	border: solid grey 3px;
+	border-radius: 10px;
+	margin: 2px 10px 2px 0;
+	padding: 3px 10px 3px 10px; 
+	width: 150px;
+	font-size: .8em;
+	text-decoration: none;
+	color: black;
+/*	box-shadow: -3px -2px 8px white inset;
+*/	transition-duration: 200ms;
+}
+.archive_button:hover {
+	background-color: white;
+	border: solid #FBAF6F 3px;
+}
+.archive_button:focus {
+	background-color: white;
+	border: solid #FBAF6F 3px;
+	outline: none;
+}
+>>>>>>> 0c6d0648448f6afec1b6cacc9539890a3a4c941f
