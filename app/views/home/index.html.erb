@@ -12,6 +12,7 @@
 <% if @pdrawing %>
 	<div class="pdrawing">
 		<%= image_tag @pdrawing.image.url(:medium) %>
+		<%= @pdrawing.user.username %>
 	</div>
 
 	<% if current_user %>
@@ -45,24 +46,11 @@
 
 <% else %>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class='main'>
 
 	<div class='pdes'>
-		<%= @pdescription.content %>	
+		<%= @pdescription.content %>
+		<%= @pdescription.user.username %>	
 	</div>
 
 
