@@ -52,7 +52,7 @@ body {
 }
 
 .cornerback {
-	position: absolute;
+	position: fixed;
 	left: 10px;
 	top: 10px;	
 	width: 120px;
@@ -66,12 +66,19 @@ body {
 	border-radius: 20px;
 }
 
-.boxes {
+.currentbox {
 	display: block;
 	margin: 5px;
 	text-align: center;
 	text-decoration: none;
 	color: white;
+}
+.boxes {
+	display: block;
+	margin: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
 	transition-duration: .3s;
 }
 
