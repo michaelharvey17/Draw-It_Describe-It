@@ -3,6 +3,7 @@ class CreateDrawings < ActiveRecord::Migration
     create_table :drawings do |t|
       t.integer :user_id
       t.integer :des_id
+      t.binary :image
       t.boolean :parent
       t.boolean :active
 

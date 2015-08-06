@@ -1,4 +1,6 @@
 class DrawingsController < ApplicationController
+  require 'base64'
+
   before_action :set_drawing, only: [:show, :edit, :update, :destroy]
 
   # GET /drawings
@@ -26,6 +28,8 @@ class DrawingsController < ApplicationController
   def create
     @parent = Description.find_by(active: true)
 
+
+    @data=params[:image]
     @drawing = Drawing.new(drawing_params)
 
       @drawing.des_id = @parent.id 
