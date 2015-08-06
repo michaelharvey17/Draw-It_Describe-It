@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require drawingboard.min.css
  */
 
 body {
@@ -175,7 +176,9 @@ body {
 	height: 200px;
 	border-bottom: solid black 2px;
 }
-
+.cdraw img {
+	width: 200px;
+}
 
 
 .stat {
@@ -577,3 +580,16 @@ body {
 	font-weight: bold;
 }
 
+
+
+
+
+
+
+
+
+
+			    #createdrawing {
+			        width: 400px;
+			        height: 400px;
+			    }
