@@ -16,7 +16,7 @@
 
 body {
 	background-color: #424142;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat Alternates', sans-serif;
 	color: white;
 }
 
@@ -52,14 +52,14 @@ body {
 
 .cornerback {
 	position: absolute;
-	left: 0;
-	top: 0;	
+	left: 10px;
+	top: 10px;	
+	width: 120px;
 	background-color: black;
-	border-right: solid #272822 1px;
-	border-bottom: solid #272822 1px;
+	border: solid #272822 1px;
 	border-radius: 3px;
 }
-.corner {	
+.corner {
 	background-color: #424142;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -107,6 +107,25 @@ body {
 	border-radius: 20px;
 }
 
+.header {
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------- Parent Description ---------------------------------------*/
 .pdesback {	
 	background-color: #FBAF6F;
 	width: 80%;
@@ -129,17 +148,8 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
 .drawdiv {
-	width: 85%;
+	text-align: center;
 	margin: 10px auto;
 }
 .drawdiv h2 {
@@ -156,7 +166,6 @@ body {
 	border-radius: 3px;
 }
 .cdrawbox {
-
 	background-color: #F9662E;
 	text-align: center;
 	border: solid black 5px;
@@ -175,30 +184,31 @@ body {
 	padding-left: 15px; 
 	text-decoration: none;
 	color: white;
-	font-size: 1em;
+	font-size: 1.5em;
 	text-shadow: 0 0 6px white;
 }
 
 .likebutton {
 	float: right;
 	display: inline-block;
-	background-color: #D7D391;
-	border: solid grey 2px;
+	background-color: #D7D4D7;
+	border: solid grey 3px;
 	border-radius: 10px;
-	margin: 2px;
+	margin: 2px 10px 2px 0;
 	padding: 3px 10px 3px 10px; 
 	width: 30%;
+	font-size: .8em;
 	text-decoration: none;
 	color: black;
-	box-shadow: -4px -2px 8px white inset;
-	transition-duration: 200ms;
+/*	box-shadow: -3px -2px 8px white inset;
+*/	transition-duration: 200ms;
 
 
 }
 .likebutton:hover {
-	    box-shadow: 2px 4px 8px #424142 inset;
-
-
+	background-color: white;
+	border: solid #FBAF6F 3px;
+	    /*box-shadow: 1px 2px 8px #424142 inset;*/
 }
 
 .likebutton:visited {
@@ -208,9 +218,53 @@ body {
 .likebutton:visited:hover {
 
 }
+.likebutton:focus {
+	background-color: white;
+	border: solid #FBAF6F 3px;
+	outline: none;
+}
+
+
+.unlikebutton {
+	float: right;
+	display: inline-block;
+	background-color: #D7D4D7;
+	border: solid grey 3px;
+	border-radius: 10px;
+	margin: 2px 10px 2px 0;
+	padding: 3px 10px 3px 10px; 
+	width: 30%;
+	font-size: .8em;
+	text-decoration: none;
+	color: black;
+	transition-duration: 200ms;
+
+
+}
+.unlikebutton:hover {
+	background-color: #D7D4D7;
+	border: solid #FBAF6F 3px;
+}
+
+.unlikebutton:visited {
+
+}
+
+.unlikebutton:visited:hover {
+
+}
+.unlikebutton:focus {
+	background-color: #D7D4D7;
+	border: solid #FBAF6F 3px;
+	outline: none;
+}
+
+
 
 
 .count {
+	font-size: .7em;
+	padding: 2px;
 	clear: both;
 	color: black;
 }
@@ -325,4 +379,192 @@ body {
 */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------- Parent Drawing ---------------------------------------*/
+
+
+
+.pdrawback {
+	text-align: center;
+}
+.pdraw {
+	display: inline-block;
+	margin: 30px;
+	background-color: #FBAF6F;
+	border: solid #D7D391 1px;
+	border-radius: 3px;
+}
+.pdraw img {
+	border: solid #FBAF6F 5px;
+	border-radius: 20px;
+	margin-bottom: -3px;
+}
+
+
+
+
+
+
+.desdiv {
+	text-align: center;
+	margin: 10px auto;
+}
+.desdiv h2 {
+	text-align: center;
+	margin-top: 60px;
+
+}
+
+.cdesboxback {
+	display: inline-block;
+	margin: 5px 5px 50px 5px;
+	width: 85%;
+	background-color: black;
+	border: solid #272822 1px;
+	border-radius: 3px;
+}
+.cdesbox {
+}
+.cdes {
+	float: left;
+	width: 80%;
+	height: 100%;
+	background-color: #F9662E;
+	text-align: left;
+	border: solid black 5px;
+	border-radius: 20px;
+}
+
+
+.cdeslike {
+	float: right;
+	width: 100px;
+	height: 100%;
+	background-color: #F9662E;
+	text-align: left;
+	border: solid black 5px;
+	border-radius: 20px;}
+.stat {
+	float: left;
+	display: inline-block;
+	padding-left: 15px; 
+	text-decoration: none;
+	color: white;
+	font-size: 1.5em;
+	text-shadow: 0 0 6px white;
+}
+
+.likebutton {
+	float: right;
+	display: inline-block;
+	background-color: #D7D4D7;
+	border: solid grey 3px;
+	border-radius: 10px;
+	margin: 2px 10px 2px 0;
+	padding: 3px 10px 3px 10px; 
+	width: 60px;
+	font-size: .8em;
+	text-decoration: none;
+	color: black;
+/*	box-shadow: -3px -2px 8px white inset;
+*/	transition-duration: 200ms;
+
+
+}
+.likebutton:hover {
+	background-color: white;
+	border: solid #FBAF6F 3px;
+	    /*box-shadow: 1px 2px 8px #424142 inset;*/
+}
+
+.likebutton:visited {
+
+}
+
+.likebutton:visited:hover {
+
+}
+.likebutton:focus {
+	background-color: white;
+	border: solid #FBAF6F 3px;
+	outline: none;
+}
+
+
+.unlikebutton {
+	float: right;
+	display: inline-block;
+	background-color: #D7D4D7;
+	border: solid grey 3px;
+	border-radius: 10px;
+	margin: 2px 10px 2px 0;
+	padding: 3px 10px 3px 10px; 
+	width: 60px;
+	font-size: .8em;
+	text-decoration: none;
+	color: black;
+	transition-duration: 200ms;
+
+
+}
+.unlikebutton:hover {
+	background-color: #D7D4D7;
+	border: solid #FBAF6F 3px;
+}
+
+.unlikebutton:visited {
+
+}
+
+.unlikebutton:visited:hover {
+
+}
+.unlikebutton:focus {
+	background-color: #D7D4D7;
+	border: solid #FBAF6F 3px;
+	outline: none;
+}
+
+
+
+
+.count {
+	font-size: .7em;
+	padding: 2px;
+	color: black;
+}
+.count span {
+	font-weight: bold;
+}
 
