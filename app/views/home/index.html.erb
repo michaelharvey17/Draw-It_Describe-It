@@ -1,4 +1,3 @@
-
 <div class='topback'>
 	<div class='top'>
 		<h1>Draw it!<br>Describe it!</h1>
@@ -17,14 +16,12 @@
 	</div>
 </div>
 
-
 <div class='rcornerback'>
 	<div class='rcorner'>
-			<%= link_to "LOG OUT", '/logout', class: 'boxes' %>
-			<%= link_to "LOG IN", '/login', class: 'boxes' %>
+			<%= link_to "Winners", '/winners', class: 'rboxes' %>
+			<%= link_to "Losers", '/losers', class: 'rboxes' %>
 	</div>
 </div>
-
 
 <% if @pdrawing %>
 	<div class='mainback'>
@@ -134,7 +131,7 @@
 					</div>
 				</div>
 			<% end %>
-			
+
 			<div class='drawdivback'>
 				<div class='drawdiv'>
 					<% if current_user %>
