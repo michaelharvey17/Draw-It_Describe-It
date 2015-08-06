@@ -116,6 +116,7 @@
 			<% if current_user %>
 				<div class='mkdrawback'>
 					<div class='mkdraw'>
+						<h2>DRAW IT!</h2>
 						<%= form_for @drawing, html: { class:'newdrawing' } do |f| %>
 							<div id="createdrawing"></div>
 							<input type="hidden" name="drawing[image]" value="">

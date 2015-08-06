@@ -91,7 +91,7 @@ body {
 
 .headerback {
 	background-color: black;
-	width: 40%;
+	width: 50%;
 	margin: 60px auto 0 auto;
 	border-radius: 3px;
 	border: solid #272822 1px;
@@ -142,7 +142,7 @@ body {
 
 .pdrawback {
 	text-align: center;
-	width: 420px;
+	width: 520px;
 	margin: 0 auto 40px auto;
 }
 .pdraw {
@@ -153,7 +153,7 @@ body {
 	border-radius: 3px;
 }
 .pdraw img {
-	width: 400px;
+	width: 500px;
 	border: solid #FBAF6F 5px;
 	border-radius: 20px;
 	margin-bottom: -3px;
@@ -418,7 +418,7 @@ body {
 .pdesback {	
 	background-color: #FBAF6F;
 	width: 80%;
-	margin: 10px auto 40px auto;
+	margin: 10px auto 10px auto;
 	border: solid #D7D391 1px;
 	border-radius: 3px;
 }
@@ -443,21 +443,25 @@ body {
 
 .mkdrawback {
 	background-color: black;
-	width: 452px;
+	width: 552px;
 	margin: 0 auto;
 	border-radius: 3px;
 	border: solid #272822 1px;
 }
 .mkdraw {
 	background-color: #F9442C;
-	padding: 20px;
+	padding: 10px 20px 20px 20px;
 	border: solid black 5px;
 	border-radius: 20px;
 }
+.mkdraw h2 {
+	margin: 0;
+	text-align: center;
+}
 
 #createdrawing {
-	width: 402px;
-	height: 435px;
+	width: 502px;
+	height: 535px;
 }
 
 
