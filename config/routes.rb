@@ -9,12 +9,14 @@ Rails.application.routes.draw do
 
   resources :descriptions do
     member do
-      put "like", to: "descriptions#upvote"
+      put "like", to: "descriptions#like"
+      put "unlike", to: "descriptions#unlike"
     end
   end
   resources :drawings do
     member do
-      put "like", to: "drawings#upvote"
+      put "like", to: "drawings#like"
+      put "unlike", to: "drawings#unlike"
     end
   end
 

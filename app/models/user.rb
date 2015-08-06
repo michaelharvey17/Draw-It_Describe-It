@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true, length: {minimum: 4, maximum: 14}
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
   validates :password_digest, confirmation: true, presence: true, length: {minimum: 7, maximum: 14}
+
+  acts_as_voter
 end
