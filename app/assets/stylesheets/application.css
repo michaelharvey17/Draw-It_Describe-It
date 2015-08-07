@@ -158,14 +158,14 @@ body {
 
 
 
-. mainback {
+.mainback {
 	background-color: black;
 	width: 80%;
 	margin: 0 auto;
 	border-radius: 3px;
 	border: solid #272822 1px;
 }
-. main {
+.main {
 	background-color: #F9442C;
 	padding: 20px;
 	border: solid black 5px;
