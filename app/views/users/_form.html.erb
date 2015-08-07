@@ -11,8 +11,10 @@
     </div>
   <% end %>
 
+<div class='signupform'>
   <div class="field">
     <%= f.label :username %><br>
+    <div class='explain'>must be between 4 and 11 characters</div>
     <%= f.text_field :username %>
   </div>
   <div class="field">
@@ -21,12 +23,15 @@
   </div>
   <div class="field">
     <%= f.label :password %><br>
-    <%= f.password_field :password_digest %>
+    <div class='explain'>must be between 5 and 14 characters</div>
+    <%= f.password_field :password %>
   </div>
   <div class="field">
     <%= f.label :confirm_password %><br>
-    <%= f.password_field :password_digest_confirmation %>
+    <%= f.password_field :password_confirmation %>
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
+
 <% end %>
