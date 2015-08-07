@@ -73,7 +73,7 @@ class DrawingsController < ApplicationController
     @drawing = Drawing.find(params[:id])
     @drawing.liked_by current_user
 
-    if @drawing.score >= 2
+    if @drawing.score >= 5
       @parent.update(active: false)
       @drawing.update(parent: true, active: true)
     end
@@ -85,7 +85,7 @@ class DrawingsController < ApplicationController
     @drawing = Drawing.find(params[:id])
     @drawing.unliked_by current_user
 
-    if @drawing.score >= 2
+    if @drawing.score >= 5
       @parent.update(active: false)
       @drawing.update(parent: true, active: true)
     end

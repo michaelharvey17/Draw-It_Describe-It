@@ -73,7 +73,7 @@ class DescriptionsController < ApplicationController
     @description = Description.find(params[:id])
     @description.liked_by current_user
 
-    if @description.score >= 2
+    if @description.score >= 5
       @parent.update(active: false)
       @description.update(parent: true, active: true)
     end
@@ -85,7 +85,7 @@ class DescriptionsController < ApplicationController
     @description = Description.find(params[:id])
     @description.unliked_by current_user
 
-    if @description.score >= 2
+    if @description.score >= 5
       @parent.update(active: false)
       @description.update(parent: true, active: true)
     end
