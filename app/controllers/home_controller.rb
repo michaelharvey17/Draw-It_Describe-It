@@ -48,10 +48,10 @@ class HomeController < ApplicationController
   #       @descriptions << x
   #     end
   #   end
-  # end
 
     @descriptions = Description.where(parent: false).reverse
     @drawings = Drawing.where(parent: false).reverse
+  end
 
   def winners
     @descriptions = Description.where(parent: true, active: false).reverse
