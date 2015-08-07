@@ -22,7 +22,12 @@
 
 $(document).ready(function(){
 
-    var myBoard = new DrawingBoard.Board('createdrawing', {webStorage: false});
+    var myBoard = new DrawingBoard.Board('createdrawing', {webStorage: false, enlargeYourContainer: true, controls: [
+    'Color',
+    { Size: { type: 'dropdown' } },
+    { DrawingMode: { filler: true } },
+    'Navigation'
+  ]});
     $('.newdrawing').on('submit', function(e) {
     var img = myBoard.getImg();
     var imgInput = (myBoard.blankCanvas == img) ? '' : img;
