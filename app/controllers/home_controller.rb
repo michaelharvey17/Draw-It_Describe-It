@@ -36,19 +36,22 @@ class HomeController < ApplicationController
   end
 
   def losers
-    @descriptions=[]
-    @drawings=[]
-    Description.where(parent: false).reverse.each do |x|
-      if x.score>=1 && !x.pdrawing || x.pdrawing.active == false
-        @descriptions << x
-      end
-    end
-    Drawing.where(parent: false).reverse.each do |x|
-      if x.score>=1 && x.pdescription.active == false
-        @descriptions << x
-      end
-    end
-  end
+  #   @descriptions=[]
+  #   @drawings=[]
+  #   Description.where(parent: false).reverse.each do |x|
+  #     if x.score>=1 && !x.pdrawing || x.pdrawing.active == false
+  #       @descriptions << x
+  #     end
+  #   end
+  #   Drawing.where(parent: false).reverse.each do |x|
+  #     if x.score>=1 && x.pdescription.active == false
+  #       @descriptions << x
+  #     end
+  #   end
+  # end
+
+    @descriptions = Description.where(parent: false).reverse
+    @drawings = Drawing.where(parent: false).reverse
 
   def winners
     @descriptions = Description.where(parent: true, active: false).reverse
