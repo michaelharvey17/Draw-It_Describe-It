@@ -20,8 +20,11 @@ class HomeController < ApplicationController
 
 
   def login_process
-        @user = User.where(username: params[:username]).first   
-    if @user && @user.password_digest == params[:password_digest]     
+        @user = User.where(username: params[:username]).first
+        puts @user.password_digest
+        puts params[:password]
+
+    if @user && @user.authenticate(params[:password])     
       session[:user_id] = @user.id
       redirect_to '/'   
     else     
@@ -36,18 +39,21 @@ class HomeController < ApplicationController
   end
 
   def losers
-    @descriptions=[]
-    @drawings=[]
-    Description.where(parent: false).reverse.each do |x|
-      if x.score>=1 && !x.pdrawing || x.pdrawing.active == false
-        @descriptions << x
-      end
-    end
-    Drawing.where(parent: false).reverse.each do |x|
-      if x.score>=1 && x.pdescription.active == false
-        @descriptions << x
-      end
-    end
+  #   @descriptions=[]
+  #   @drawings=[]
+  #   Description.where(parent: false).reverse.each do |x|
+  #     if x.score>=1 && !x.pdrawing || x.pdrawing.active == false
+  #       @descriptions << x
+  #     end
+  #   end
+  #   Drawing.where(parent: false).reverse.each do |x|
+  #     if x.score>=1 && x.pdescription.active == false
+  #       @descriptions << x
+  #     end
+  #   end
+
+    @descriptions = Description.where(parent: false).reverse
+    @drawings = Drawing.where(parent: false).reverse
   end
 
   def winners
