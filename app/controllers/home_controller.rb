@@ -21,7 +21,7 @@ class HomeController < ApplicationController
 
   def login_process
         @user = User.where(username: params[:username]).first   
-    if @user && @user.password_digest == params[:password_digest]     
+    if @user && @user.password_digest == params[:password]     
       session[:user_id] = @user.id
       redirect_to '/'   
     else     
