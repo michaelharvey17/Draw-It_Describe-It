@@ -13,22 +13,24 @@
 
 <div class='signupform'>
   <div class="field">
-    <%= f.label :username %><br>
-    <div class='explain'>must be between 4 and 11 characters</div>
-    <%= f.text_field :username %>
+    
+    <div class='explain'>Username must be between 4 and 11 characters</div>
+    <%= f.text_field :username, :placeholder => "Username" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    
+    <div class='explain'>Please enter a valid Email</div>
+    <%= f.text_field :email, :placeholder => "Email" %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
-    <div class='explain'>must be between 5 and 14 characters</div>
-    <%= f.password_field :password %>
+    
+    <div class='explain'>Password must be between 5 and 14 characters</div>
+    <%= f.password_field :password, :placeholder => "Password" %>
   </div>
   <div class="field">
-    <%= f.label :confirm_password %><br>
-    <%= f.password_field :password_confirmation %>
+
+    <div class='explain'>Confirm your password</div>
+    <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %>
   <div class="actions">
     <%= f.submit %>
   </div>
