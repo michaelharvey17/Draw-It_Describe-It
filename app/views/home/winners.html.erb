@@ -1,7 +1,7 @@
 <div class='topback'>
-	<div class="top">
-		<h1>Winners<br>Archive</h1>
-	</div>
+	<%= link_to "<div class='top'>
+		<h1>Draw it!<br>Describe it!</h1>
+	</div>".html_safe, '/', class: 'homelink' %>
 </div>
 
 <div class='cornerback'>
@@ -13,6 +13,12 @@
 			<%= link_to "SIGN UP", new_user_path, class: 'boxes' %>
 			<%= link_to "LOG IN", '/login', class: 'boxes' %>
 		<% end %>
+	</div>
+</div>
+
+<div class='headerback'>
+	<div class='header'>
+		WINNERS ARCHIVE
 	</div>
 </div>
 
@@ -71,7 +77,6 @@
 
 <div class='rcornerback'>
 	<div class='rcorner'>
-		<%= link_to "HOME", '/', class: 'rboxes' %>
-		<%= link_to "Losers", '/losers', class: 'rboxes' %>
+		<%= link_to "Losers Archive", '/losers', class: 'rboxes' %>
 	</div>
 </div>

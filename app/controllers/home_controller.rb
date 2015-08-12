@@ -21,8 +21,7 @@ class HomeController < ApplicationController
 
   def login_process
         @user = User.where(username: params[:username]).first
-        puts @user.password_digest
-        puts params[:password]
+
 
     if @user && @user.authenticate(params[:password])     
       session[:user_id] = @user.id

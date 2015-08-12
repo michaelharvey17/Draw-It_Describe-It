@@ -16,19 +16,74 @@
  */
 
 
+/*
+
+F9662E E5602E orange
+F9442C E4412C red
+FBAF6F E5A268 lightorange
+D7D391 C6C287 gold
+
+*/
+
 body {
 	background-color: #424142;
 	font-family: 'Montserrat Alternates', sans-serif;
 	color: white;
 }
 
+.homelink {
+	text-decoration: none;
+	transition-duration: 200ms;
+	color: white;
+	   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.homelink:hover {
+	text-decoration: none;
+   text-shadow:
+       8px 8px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.homelink:visited:hover {
+	text-decoration: none;
+   text-shadow:
+       8px 8px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.homelink:focus {
+	text-decoration: none;
+	outline: none;
+   text-shadow:
+       8px 8px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
 
+
+.usercount {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1em;
+}
 
 
 /*  ----------------------------------------  Desktop  ----------------------------------------  */
 
 /*  ----------------------------------------  Desktop  ----------------------------------------  */
-@media (min-width: 480.0001px) {
+@media (min-width: 650.0001px) {
 /*  ----------------------------------------  Desktop  ----------------------------------------  */
 
 /*  ----------------------------------------  Desktop  ----------------------------------------  */
@@ -36,27 +91,21 @@ body {
 
 .topback {
 	background-color: black;
-	width: 35%;
-	margin: 10px auto;
+	width: 40%;
+	margin: 5px auto;
 	border: solid #272822 1px;
 	border-radius: 3px;
 }
 .top {
 	font-family: 'Slackey', cursive;
 	font-size: 2vw;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: center;
 	padding: 15px 5px 15px 5px;
 	border: solid black 5px;
 	border-radius: 20px;
 
-   color: white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
+
 }
 .top h1 {
 	margin: 0
@@ -64,48 +113,54 @@ body {
 }
 
 .cornerback {
-	position: fixed;
-	left: 3px;
-	top: 20px;	
-	width: 120px;
+	width: 40%;
+	margin: 5px auto;
 	background-color: black;
 	border: solid #272822 1px;
 	border-radius: 3px;
 }
 .corner {
-	background-color: #FA432B;
+	background-color: #D7D4D7;
 	border: solid black 5px;
 	border-radius: 20px;
+	text-align: center;
 }
 
 .currentbox {
-	display: block;
-	margin: 15px 5px 15px 5px;
+	display: inline-block;
+	margin: 5px 15px 5px 15px;
 	text-align: center;
 	text-decoration: none;
 	color: white;
+	   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 .boxes {
-	display: block;
-	margin: 15px 5px 15px 5px;
+	display: inline-block;
+	margin: 5px 15px 5px 15px;
 	text-align: center;
 	text-decoration: none;
 	color: black;
 	transition-duration: .3s;
 }
 
+
 .boxes:hover {
-	color: #D7D391;
+	color: #FBAF6F;
 	/*box-shadow: 0 0 0 4px #75B391;*/
 }
 .boxes:focus {
-	color: #D7D391;
+	color: #FBAF6F;
 	/*box-shadow: 0 0 0 4px #75B391;*/
 	outline: none;
 }
 
 
-.rcornerback {
+/*.rcornerback {
 	position: fixed;
 	right: 3px;
 	top: 20px;	
@@ -127,6 +182,35 @@ body {
 	padding: 3px 0px 3px 0px; 
 	width: 70px;
 	margin: 10px auto;
+	font-size: .8em;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	transition-duration: 200ms;
+}
+*/
+
+.rcornerback {
+	width: 80%;
+	margin: 5px auto 25px auto;
+	background-color: black;
+	border: solid #272822 1px;
+	border-radius: 3px;
+}
+.rcorner {
+	background-color: #FA432B;
+	border: solid black 5px;
+	border-radius: 20px;
+	text-align: center;
+}
+.rboxes {
+	display: inline-block;
+	background-color: #D7D4D7;
+	border: solid grey 3px;
+	border-radius: 10px;
+	padding: 3px 0px 3px 0px; 
+	width: 70px;
+	margin: 3px 15px 3px 15px;
 	font-size: .8em;
 	text-decoration: none;
 	text-align: center;
@@ -160,7 +244,7 @@ body {
 }
 .header {
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 10px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -178,7 +262,7 @@ body {
 	border: solid #272822 1px;
 }
 .main {
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 20px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -196,7 +280,7 @@ body {
 .pdrawback {
 	text-align: center;
 	width: 520px;
-	margin: 0 auto 40px auto;
+	margin: 0 auto 20px auto;
 }
 .pdraw {
 	display: inline-block;
@@ -230,7 +314,7 @@ body {
 	border: solid #272822 1px;
 }
 .mkdes {
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 10px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -288,14 +372,14 @@ body {
 
 .desdivback {
 	background-color: black;
-	width: 60%;
-	margin: 20px auto 100px;
+	width: 80%;
+	margin: 20px auto 20px;
 	border-radius: 3px;
 	border: solid #272822 1px;
 }
 .desdiv {
 	margin: 0px auto;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding-top: 10px;
 	padding-bottom: 100px;
 	border: solid black 5px;
@@ -313,7 +397,7 @@ body {
 	position: relative;
 	display: inline-block;
 	margin: 5px 5px 5px 5px;
-	width: 85%;
+	width: 70%;
 	min-height: 65px;
 	background-color: black;
 	border: solid #272822 1px;
@@ -329,7 +413,7 @@ body {
 	height: 100%;
 	box-sizing: border-box;
 	margin: auto auto;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: left;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -345,7 +429,7 @@ body {
 	width: 110px;
 	height: 100%;
 	box-sizing: border-box;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: left;
 	border: solid black 5px;
 	border-radius: 20px;}
@@ -472,7 +556,7 @@ body {
 	text-shadow: 0 0 6px #D7D391;
 	text-align: center;
 	padding: 10px 10px 10px 10px;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	border: solid #FBAF6F 5px;
 	border-radius: 20px;
 }
@@ -493,7 +577,7 @@ body {
 	border: solid #272822 1px;
 }
 .mkdraw {
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 10px 0px 20px 0px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -552,13 +636,13 @@ body {
 .drawdivback {
 	background-color: black;
 	width: 80%;
-	margin: 20px auto 100px auto;
+	margin: 20px auto 20px auto;
 	border-radius: 3px;
 	border: solid #272822 1px;
 }
 .drawdiv {
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 10px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -572,7 +656,7 @@ body {
 	border-radius: 3px;
 }
 .cdrawbox {
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: center;
 	border: solid black 5px;
 	border-radius: 3px 3px 20px 20px;
@@ -706,7 +790,7 @@ body {
 	height: 146px;
 	font-family: 'Slackey', cursive;
 	font-size: 2vw;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: center;
 	padding: 15px 5px 15px 5px;
 	border: solid black 5px;
@@ -726,7 +810,7 @@ body {
 	text-align: center;
 	padding: 10px 10px 10px 10px;
 	background-color: white;
-	border: solid #F9442C 5px;
+	border: solid #E4412C 5px;
 	border-radius: 20px;
 	transition-duration: 500ms;
 }
@@ -744,7 +828,7 @@ body {
 	text-align: center;
 	padding: 10px 10px 10px 10px;
 	background-color: white;
-	border: solid #F9442C 5px;
+	border: solid #E4412C 5px;
 	border-radius: 20px;
 	transition-duration: 500ms;
 }
@@ -763,7 +847,7 @@ body {
 	transition-duration: 200ms;
 	text-align: center;
 	background-color: white;
-	border: solid #F9442C 5px;
+	border: solid #E4412C 5px;
 	border-radius: 20px;
 	transition-duration: 500ms;
 
@@ -798,7 +882,7 @@ body {
 }
 .archivebuttons {
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 10px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -837,7 +921,7 @@ body {
 }
 .archive {
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 20px 10px 20px 10px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -864,13 +948,17 @@ body {
 .signupform {
 	text-align: center;
 }
+
 .explain {
-	font-size: .5em;
+	font-size: .8em;
 	color: #D7D4D7;
+}
+.field_with_errors {
+	display: block;
 }
 .signupform input {
 	margin-bottom: 10px;
-	padding: 5px;
+	padding: 10px;
 	border: solid black 5px;
 	transition-duration: 200ms;
 }
@@ -964,10 +1052,17 @@ body {
 
 
 
+
+
+
+
+
+
+
 /*  ----------------------------------------  Mobile  ----------------------------------------  */
 
 /*  ----------------------------------------  Mobile  ----------------------------------------  */
-@media (max-width: 480px) {
+@media (max-width: 650px) {
 /*  ----------------------------------------  Mobile  ----------------------------------------  */
 
 /*  ----------------------------------------  Mobile  ----------------------------------------  */
@@ -983,19 +1078,11 @@ body {
 .top {
 	font-family: 'Slackey', cursive;
 	font-size: 3vw;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: center;
 	padding: 15px 5px 15px 5px;
 	border: solid black 5px;
 	border-radius: 20px;
-
-   color: white;
-   text-shadow:
-       3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000;
 }
 .top h1 {
 	margin: 0
@@ -1003,14 +1090,14 @@ body {
 }
 
 .cornerback {
-	width: 95%;
+	width: 60%;
 	margin: 5px auto;
 	background-color: black;
 	border: solid #272822 1px;
 	border-radius: 3px;
 }
 .corner {
-	background-color: #FA432B;
+	background-color: #D7D4D7;
 	border: solid black 5px;
 	border-radius: 20px;
 	text-align: center;
@@ -1018,14 +1105,20 @@ body {
 
 .currentbox {
 	display: inline-block;
-	margin: 0px 15px 0px 15px;
+	margin: 5px 15px 5px 15px;
 	text-align: center;
 	text-decoration: none;
 	color: white;
+	   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
 }
 .boxes {
 	display: inline-block;
-	margin: 0px 15px 0px 15px;
+	margin: 5px 15px 5px 15px;
 	text-align: center;
 	text-decoration: none;
 	color: black;
@@ -1033,11 +1126,11 @@ body {
 }
 
 .boxes:hover {
-	color: #D7D391;
+	color: #FBAF6F;
 	/*box-shadow: 0 0 0 4px #75B391;*/
 }
 .boxes:focus {
-	color: #D7D391;
+	color: #FBAF6F;
 	/*box-shadow: 0 0 0 4px #75B391;*/
 	outline: none;
 }
@@ -1096,9 +1189,9 @@ body {
 	border: solid #272822 1px;
 }
 .header {
-	font-size: 10px;
+	font-size: 3vw;
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 5px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -1116,7 +1209,7 @@ body {
 	border: solid #272822 1px;
 }
 .main {
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 20px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -1168,7 +1261,7 @@ body {
 	border: solid #272822 1px;
 }
 .mkdes {
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 10px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -1233,7 +1326,7 @@ body {
 }
 .desdiv {
 	margin: 0px auto;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border: solid black 5px;
@@ -1268,7 +1361,7 @@ body {
 	height: 100%;
 	box-sizing: border-box;
 	margin: auto auto;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: left;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -1284,7 +1377,7 @@ body {
 	width: 90px;
 	height: 100%;
 	box-sizing: border-box;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: left;
 	border: solid black 5px;
 	border-radius: 20px;}
@@ -1411,7 +1504,7 @@ body {
 	text-shadow: 0 0 6px #D7D391;
 	text-align: center;
 	padding: 10px 5px 5px 5px;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	border: solid #FBAF6F 5px;
 	border-radius: 20px;
 }
@@ -1432,7 +1525,7 @@ body {
 	border: solid #272822 1px;
 }
 .mkdraw {
-	background-color: #F9442C;
+	background-color: #E4412C;
 	/*padding: 10px 20px 20px 20px;*/
 	border: solid black 5px;
 	border-radius: 20px;
@@ -1498,7 +1591,7 @@ body {
 }
 .drawdiv {
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 5px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -1514,7 +1607,7 @@ body {
 	border-radius: 3px;
 }
 .cdrawbox {
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: center;
 	border: solid black 5px;
 	border-radius: 3px 3px 20px 20px;
@@ -1648,7 +1741,7 @@ body {
 	height: 146px;
 	font-family: 'Slackey', cursive;
 	font-size: 2vw;
-	background-color: #F9662E;
+	background-color: #E5602E;
 	text-align: center;
 	padding: 15px 5px 5px 5px;
 	border: solid black 5px;
@@ -1668,7 +1761,7 @@ body {
 	text-align: center;
 	padding: 10px 10px 10px 10px;
 	background-color: white;
-	border: solid #F9442C 5px;
+	border: solid #E4412C 5px;
 	border-radius: 20px;
 	transition-duration: 500ms;
 }
@@ -1686,7 +1779,7 @@ body {
 	text-align: center;
 	padding: 10px 10px 10px 10px;
 	background-color: white;
-	border: solid #F9442C 5px;
+	border: solid #E4412C 5px;
 	border-radius: 20px;
 	transition-duration: 500ms;
 }
@@ -1705,7 +1798,7 @@ body {
 	transition-duration: 200ms;
 	text-align: center;
 	background-color: white;
-	border: solid #F9442C 5px;
+	border: solid #E4412C 5px;
 	border-radius: 20px;
 	transition-duration: 500ms;
 
@@ -1740,7 +1833,7 @@ body {
 }
 .archivebuttons {
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 10px;
 	border: solid black 5px;
 	border-radius: 20px;
@@ -1779,7 +1872,7 @@ body {
 }
 .archive {
 	text-align: center;
-	background-color: #F9442C;
+	background-color: #E4412C;
 	padding: 20px 0px 20px 0px;
 	border: solid black 5px;
 	border-radius: 20px;

@@ -1,7 +1,7 @@
 <div class='topback'>
-	<div class='top'>
+	<%= link_to "<div class='top'>
 		<h1>Draw it!<br>Describe it!</h1>
-	</div>
+	</div>".html_safe, '/', class: 'homelink' %>
 </div>
 
 <div class='cornerback'>
@@ -182,7 +182,10 @@
 
 <div class='rcornerback'>
 	<div class='rcorner'>
-			<%= link_to "Winners", '/winners', class: 'rboxes' %>
-			<%= link_to "Losers", '/losers', class: 'rboxes' %>
+			<%= link_to "Winners Archive", '/winners', class: 'rboxes' %>
+			<%= link_to "Losers Archive", '/losers', class: 'rboxes' %>
 	</div>
+</div>
+<div class='usercount'>
+	<%= User.count %> users signed up to date!
 </div>
