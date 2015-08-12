@@ -51,13 +51,15 @@ class HomeController < ApplicationController
   #     end
   #   end
 
-    @descriptions = Description.where(parent: false).reverse
-    @drawings = Drawing.where(parent: false).reverse
+    @des_array=Description.where(parent: false).reverse
+    @draw_array=Drawing.where(parent: false).reverse
+    @descriptions = Kaminari.paginate_array(@des_array).page(params[:page]).per(12)
+    @drawings = Kaminari.paginate_array(@draw_array).page(params[:page]).per(12)
   end
 
   def winners
-    @descriptions = Description.where(parent: true, active: false).reverse
-    @drawings = Drawing.where(parent: true, active: false).reverse
+    @descriptions = Kaminari.paginate_array(Description.where(parent: true, active: false).reverse).page(params[:page]).per(12)
+    @drawings = Kaminari.paginate_array(Drawing.where(parent: true, active: false).reverse).page(params[:page]).per(12)
   end
 
 end
