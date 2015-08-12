@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'acts_as_votable'
 gem 'passenger'
 gem 'newrelic_rpm'
+gem 'kaminari'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'

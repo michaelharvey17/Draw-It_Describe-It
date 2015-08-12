@@ -52,6 +52,8 @@
 					</div>
 				</div>
 			<% end %>
+			<%= paginate @descriptions %>
+			<%= page_entries_info @descriptions %>
 		</div>
 
 		<div class="archive_main" id="draw_archive">
@@ -74,6 +76,8 @@
 					</div>
 				</div>
 			<% end %>
+			<%= paginate @drawings %>
+			<%= page_entries_info @drawings %>
 		</div>
 	</div>
 </div>
