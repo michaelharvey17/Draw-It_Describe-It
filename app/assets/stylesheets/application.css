@@ -33,7 +33,7 @@ body {
 
 .homelink {
 	text-decoration: none;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 	color: white;
 	   text-shadow:
        3px 3px 0 #000,
@@ -78,6 +78,157 @@ body {
 	text-align: center;
 	font-size: 1em;
 }
+
+
+
+
+
+
+
+
+.pagething {
+	color: white;
+}
+
+.pagination {
+}
+
+.page {
+	padding: 0 5px 0 5px;
+}
+.page a {
+	color: white;
+	transition-duration: 300ms;
+}
+.page a:hover {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.page a:focus {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.current {
+	color: white;
+	font-weight: bolder;
+	   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.next {
+}
+.next a {
+	padding: 0 5px 0 5px;
+	color: white;
+	transition-duration: 300ms;
+}
+.next a:hover {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.next a:focus {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.last {
+}
+.last a {
+	padding: 0 5px 0 5px;
+	color: white;
+	transition-duration: 300ms;
+}
+.last a:hover {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.last a:focus {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.prev {
+}
+.prev a {
+	padding: 0 5px 0 5px;
+	color: white;
+	transition-duration: 300ms;
+}
+.prev a:hover {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.prev a:focus {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.first {
+}
+.first a {
+	padding: 0 5px 0 5px;
+	color: white;
+	transition-duration: 300ms;
+}
+.first a:hover {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.first a:focus {
+	   text-shadow:
+       0px 0px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+
+
+
+
+
+
 
 
 /*  ----------------------------------------  Desktop  ----------------------------------------  */
@@ -186,7 +337,7 @@ body {
 	text-decoration: none;
 	text-align: center;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 */
 
@@ -215,7 +366,7 @@ body {
 	text-decoration: none;
 	text-align: center;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .rboxes:hover {
 	background-color: white;
@@ -352,7 +503,7 @@ body {
 	text-decoration: none;
 	color: black;
 
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .newdescription input[type="Submit"]:hover {
 	background-color: white;
@@ -457,7 +608,7 @@ body {
 	color: black;
 	text-align: center;
 /*	box-shadow: -3px -2px 8px white inset;
-*/	transition-duration: 200ms;
+*/	transition-duration: 300ms;
 
 
 }
@@ -494,7 +645,7 @@ body {
 	text-decoration: none;
 	color: black;
 	text-align: center;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 
 
 }
@@ -608,7 +759,7 @@ body {
 	text-decoration: none;
 	color: black;
 /*	box-shadow: -3px -2px 8px white inset;
-*/	transition-duration: 200ms;
+*/	transition-duration: 300ms;
 
 
 }
@@ -693,7 +844,7 @@ body {
 	text-decoration: none;
 	color: black;
 /*	box-shadow: -3px -2px 8px white inset;
-*/	transition-duration: 200ms;
+*/	transition-duration: 300ms;
 
 
 }
@@ -729,7 +880,7 @@ body {
 	font-size: .8em;
 	text-decoration: none;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 
 
 }
@@ -844,7 +995,7 @@ body {
 	width: 30%;
 	text-decoration: none;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 	text-align: center;
 	background-color: white;
 	border: solid #E4412C 5px;
@@ -916,7 +1067,7 @@ body {
 	font-size: .8em;
 	text-decoration: none;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .archive_button:hover {
 	background-color: white;
@@ -977,7 +1128,7 @@ body {
 	margin-bottom: 10px;
 	padding: 10px;
 	border: solid black 5px;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .signupform input:focus {
 	border: solid #FDAF69 5px;
@@ -997,7 +1148,7 @@ body {
 	text-decoration: none;
 	color: black;
 	margin-bottom: 60px;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .signupform input[type="Submit"]:hover {
 	background-color: white;
@@ -1178,7 +1329,7 @@ body {
 	text-decoration: none;
 	text-align: center;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .rboxes:hover {
 	background-color: white;
@@ -1316,7 +1467,7 @@ body {
 	text-decoration: none;
 	color: black;
 
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .newdescription input[type="Submit"]:hover {
 	background-color: white;
@@ -1422,7 +1573,7 @@ body {
 	color: black;
 	text-align: center;
 /*	box-shadow: -3px -2px 8px white inset;
-*/	transition-duration: 200ms;
+*/	transition-duration: 300ms;
 
 
 }
@@ -1459,7 +1610,7 @@ body {
 	text-decoration: none;
 	color: black;
 	text-align: center;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 
 
 }
@@ -1574,7 +1725,7 @@ body {
 	text-decoration: none;
 	color: black;
 /*	box-shadow: -3px -2px 8px white inset;
-*/	transition-duration: 200ms;
+*/	transition-duration: 300ms;
 }
 
 
@@ -1661,7 +1812,7 @@ body {
 	text-decoration: none;
 	color: black;
 /*	box-shadow: -3px -2px 8px white inset;
-*/	transition-duration: 200ms;
+*/	transition-duration: 300ms;
 
 
 }
@@ -1697,7 +1848,7 @@ body {
 	font-size: .8em;
 	text-decoration: none;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 
 
 }
@@ -1812,7 +1963,7 @@ body {
 	width: 30%;
 	text-decoration: none;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 	text-align: center;
 	background-color: white;
 	border: solid #E4412C 5px;
@@ -1884,7 +2035,7 @@ body {
 	font-size: .8em;
 	text-decoration: none;
 	color: black;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .archive_button:hover {
 	background-color: white;
@@ -1942,7 +2093,7 @@ body {
 	margin-bottom: 10px;
 	padding: 5px;
 	border: solid black 5px;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .signupform input:focus {
 	border: solid #FDAF69 5px;
@@ -1962,7 +2113,7 @@ body {
 	text-decoration: none;
 	color: black;
 	margin-bottom: 60px;
-	transition-duration: 200ms;
+	transition-duration: 300ms;
 }
 .signupform input[type="Submit"]:hover {
 	background-color: white;
@@ -1978,10 +2129,6 @@ body {
 	border: solid #FBAF6F 3px;
 	outline: none;
 }
-
-
-
-
 
 
 }
