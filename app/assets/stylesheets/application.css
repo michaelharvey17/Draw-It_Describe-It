@@ -870,7 +870,24 @@ body {
 /*--------------------------------------- Archives ---------------------------------------*/
 
 
-
+.aheaderback {
+	background-color: black;
+	width: 50%;
+	margin: 60px auto 0 auto;
+	border-radius: 3px;
+	border: solid #272822 1px;
+}
+.aheader {
+	text-align: center;
+	background-color: #E4412C;
+	padding: 10px;
+	border: solid black 5px;
+	border-radius: 20px;
+	font-size: 1.5em;
+}
+.asubheader {
+	font-size: .5em;
+}
 
 
 .archivebuttonsback {
@@ -1822,7 +1839,24 @@ body {
 
 
 
-
+.aheaderback {
+	background-color: black;
+	width: 60%;
+	margin: 60px auto 0 auto;
+	border-radius: 3px;
+	border: solid #272822 1px;
+}
+.aheader {
+	text-align: center;
+	background-color: #E4412C;
+	padding: 10px;
+	border: solid black 5px;
+	border-radius: 20px;
+	font-size: 1.2em;
+}
+.asubheader {
+	font-size: .5em;
+}
 
 .archivebuttonsback {
 	background-color: black;
