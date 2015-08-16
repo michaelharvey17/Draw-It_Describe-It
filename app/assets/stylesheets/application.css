@@ -1272,6 +1272,7 @@ body {
 }
 
 .currentbox {
+	font-size: 3.5vw;
 	display: inline-block;
 	margin: 5px 15px 5px 15px;
 	text-align: center;
@@ -1285,6 +1286,7 @@ body {
        1px 1px 0 #000;
 }
 .boxes {
+	font-size: 3.5vw;
 	display: inline-block;
 	margin: 5px 15px 5px 15px;
 	text-align: center;

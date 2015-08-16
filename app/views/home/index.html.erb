@@ -37,6 +37,7 @@
 		<div class='mkdesback'>
 			<div class='mkdes'>
 				<h2>DESCRIBE IT!</h2>
+				<div>(get ridiculous)</div>
 				<%= form_for @description, html: { class:'newdescription' } do |f| %>
 					<%=f.text_area :content, :placeholder => "Go ahead...", maxlength: 100 %>
 					<%=f.submit :"Submit Description" %>
@@ -50,6 +51,7 @@
 			<% if current_user %>
 				<div class='instruct'>Like your favorite descriptions of the above drawing!</div>
 				<div class='instruct'>The first to get 5 likes becomes the star of the next game!</div>
+				<div class='instruct'>Then you get to DRAW IT!</div>
 			<% else %>
 				<div class='instruct'>Log in to Describe It!</div>
 				<div class='instruct'>Here are some drawings of the above description...</div>
@@ -116,6 +118,7 @@
 		<div class='mkdrawback'>
 			<div class='mkdraw'>
 				<h2>DRAW IT!</h2>
+				<div>(get ridiculous)</div>
 				<%= form_for @drawing, html: { class:'newdrawing' } do |f| %>
 					<div id="createdrawing"></div>
 					<input type="hidden" name="drawing[image]" value="">
@@ -130,6 +133,7 @@
 			<% if current_user %>
 				<div class='instruct'>Like your favorite drawings of the above description!</div>
 				<div class='instruct'>The first to get 5 likes becomes the star of the next game!</div>
+				<div class='instruct'>Then you get to DESCRIBE IT!</div>
 			<% else %>
 				<div class='instruct'>Log in to Draw It!</div>
 				<div class='instruct'>Here are some drawings of the above description...</div>
